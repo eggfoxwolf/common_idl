@@ -75,8 +75,8 @@ struct NotifyCallBackResp {
 }
 
 service RechargeService {
-  VipRechargeListResp getVipRechargeList(1: VipRechargeListReq req) (api.get="/recharge/paid_service/list");
-  PrepayResp getPrepay(1: PrepayReq req) (api.post="/recharge/paid_service/prepay");
-  PayResultResp getPayResult(1: PayResultReq req) (api.get="/recharge/paid_service/pay_result");
-  NotifyCallBackResp notifyCallBack(1: NotifyCallBackReq req) (api.post="/recharge/paid_service/notify_callback");
+  VipRechargeListResp getVipRechargeList(1: VipRechargeListReq req) (api.get="/recharge/paid_service/list/");
+  PrepayResp getPrepay(1: PrepayReq req) (api.post="/recharge/paid_service/prepay/");
+  PayResultResp getPayResult(1: PayResultReq req) (api.get="/recharge/paid_service/pay_result/");
+  NotifyCallBackResp notifyCallBack(1: NotifyCallBackReq req) (api.post="/recharge/paid_service/notify_callback/");
 }
