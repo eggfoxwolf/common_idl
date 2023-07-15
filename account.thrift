@@ -4,6 +4,7 @@ enum VipType{
     NO_VIP = 0
     TRIAL_VIP = 1
     PAID_VIP = 2
+    LIMITED_VIP = 3
 }
 
 struct Account {
@@ -12,10 +13,19 @@ struct Account {
     3: VipType vip_type
     4: i32 vip_start_time
     5: i32 vip_end_time
+    6: list<GroupInfo> group_list
+}
+
+struct GroupInfo {
+    1: i32 group_id
+    2: string group_name
+    3: string group_url
 }
 
 struct UserLoginReq {
     1: string wx_code
+    2: string nick_name
+    3: string avatar_url
 }
 
 struct UserLoginResp {

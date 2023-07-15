@@ -12,7 +12,8 @@ struct Job {
     1: i32      job_id;            
     2: string   name;              
     4: bool     selected_before;   
-    5: string   round_id;          
+    5: string   round_id;
+    6: i32      is_membership_type
 }
 
 struct JobList {
